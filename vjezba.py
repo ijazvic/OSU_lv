@@ -43,7 +43,7 @@ te klase?"""
 ##################################################
 
 
-#a)
+#a): Ovdje smo prvo izdvojili obe klase u zasebna polja te ih zatim prikazali na grafu u razlicitim bojama. Iz grafa se jasno vide dvije odvojena klase
 versicolour_data = (data1[ data1['target'] == 1])
 plt.scatter(versicolour_data[['sepal length (cm)']], versicolour_data[['petal length (cm)']], c = "red", label="versicolour")
 plt.title('odnos duljine latice i cašice svih pripadnika klase versicolour')
@@ -56,14 +56,16 @@ plt.xlabel("sepal length (cm)")
 plt.ylabel("petal length (cm)")
 plt.legend(loc="upper left")
 plt.show()
-#b)
+
+#b) Ovdje smo prvo trebali grupirati podatke prema klasi te naći prosječne vrijednosti stupaca I zatim prikazati na grafu traženu prosječnu vrijednost 
 grouped = data1.groupby('target').mean()
 grouped["sepal width (cm)"].plot(kind="bar")
 plt.title("prosječna vrijednost širine cašice za sve tri klase")
 plt.xlabel("klase")
 plt.ylabel("prosječna širina čašice")
 plt.show()
-#c)
+
+#c)Ovdje smo prvo našli prosječnu duljinu za te jedinke te izbrojali koliko ih ima veću vrijednost.
 virginica_avg = virginica_data["sepal width (cm)"].mean()
 count = virginica_data[virginica_data["sepal width (cm)"] > virginica_avg].count()
 print(count)
@@ -110,7 +112,7 @@ for i in range(1, 8):
 plt.plot(Ks, Js)
 plt.show()
 
-#c)
+#c)  Iz ovog grafa vidimo da je algoritam K mean pronašao I dobro odvojio 3 klase te je dobro smjestio centroide klasa. 
 km = KMeans(n_clusters=3, init='random', n_init=5, random_state=0)
 km.fit(X)
 labels = km.predict(X)
