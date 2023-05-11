@@ -1,0 +1,7 @@
+LV3 - pandas/formatiranje/hist/bar/plotanje
+LV4 - linearna regresija/parametri modela
+LV5 - klasifikacija/scatter grafovi i c..cmap/granica odluke/matrica zabune
+LV6 - KNN/SVM/overfit..underfit/elbow za K/GridSearch
+LV7 - Kmeans/kvantizacija slike
+LV8 - NN/ucenje brojeva
+LV9 - CNN/slojevi
